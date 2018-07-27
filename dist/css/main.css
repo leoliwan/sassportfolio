@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700");
+.hamburger_menu {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  z-index: pointer;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .hamburger_menu .btn_line {
+    width: 30px;
+    height: 4px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .hamburger_menu.close {
+    transform: rotate(180deg); }
+    .hamburger_menu.close .btn_line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      background: #F95759; }
+    .hamburger_menu.close .btn_line:nth-child(2) {
+      opacity: 0; }
+    .hamburger_menu.close .btn_line:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -7px);
+      background: #F95759; }
+
 * {
   box-sizing: border-box; }
 

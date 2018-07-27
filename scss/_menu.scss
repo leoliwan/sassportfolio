@@ -1,0 +1,37 @@
+// Hamburger Button
+.hamburger_menu {
+    position: absolute;
+    right:35px;
+    top:35px;
+    z-index: pointer;
+    cursor: pointer;
+    @include easeOut;
+
+    .btn_line {
+        width: 30px;
+        height: 4px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        @include easeOut;
+    }
+    &.close {
+        transform: rotate(180deg);
+        .btn_line {
+            // Line 1 = Rotate/Translate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+                background: $danger-color
+            }
+            // Line 2 = Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            // Line 3 = Rotate/Translate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(8px, -7px);
+                background: $danger-color
+            }
+        }
+    }
+    
+}
