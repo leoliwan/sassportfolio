@@ -1,0 +1,30 @@
+CREATING A WORKFLOW
+
+1. Create a new folder. Open with studio code. Create new folder called dist then create new file main.scss
+
+2. Create another folder called index.html.
+
+3. In your terminal type in npm init to create a json manifest. Enter some info about your project. 
+
+4. Next, run npm i node-sass to create a node-module.
+
+5. Next is to set up package.json. Open it and change the "test" to "script" and the "echo \"Error...." with: "node-sass -w scss/ -o dist/css/ --recursive"
+
+6. Test by going to main-scss and create a new color variable like this: 
+$primary-color: #444;
+
+body {
+    background: $primary-color;
+}
+
+Then type in npm run sass. It should create a show a Rendering Complete in the terminal and create a new folder called css in the dist folder.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATING A GIT REPOSITORY
+
+1. Run: touch .gitignore. Open the file and write node_modules. Save it. What this does is to ignore the node_modules files when you create a git repository. 
+
+2. Now run: git init. Then run git add . .
+
+3. Then run: git commit -m 'Initialize workflow setup'

@@ -1,0 +1,35 @@
+// Color Variables
+$primary-color: #0FACF3;
+$secondary-color: #00C853;
+$default-color: #111;
+$warning-color:#FFAB00;
+$danger-color: #F95759;
+
+// Images Variables
+$show-home-image: true;
+$hero-image: url(../img/bg-image2.jpg);
+$backround-opacity: 0.9;
+
+// Transition Mixed In
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+@mixin background {
+    @if $show-home-image {
+        &#bg-image {
+            background: $hero-image;
+            background-size: cover;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($default-color, $backround-opacity);
+                z-index: -1;
+            }
+        }
+    }
+}
