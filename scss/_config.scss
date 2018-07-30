@@ -1,7 +1,7 @@
 // Color Variables
 $primary-color: #0FACF3;
 $secondary-color: #00C853;
-$default-color: #111;
+$default-color: #444;
 $warning-color:#FFAB00;
 $danger-color: rgb(255, 34, 37);
 
@@ -31,6 +31,16 @@ $backround-opacity: 0.9;
                 z-index: -1;
             }
         }
+    }
+}
+
+// Set Text Color
+// This will create contrast for text color and the background color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
     }
 }
 

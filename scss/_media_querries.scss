@@ -41,7 +41,21 @@
             height: 150px;
         }
     }
+
+    // About Page
+    .about_me_info {
+        grid-template-areas: 
+        'profile_image'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+
+        grid-template-columns: 1fr;
+    }
 }
+
+
 
 // Smartphone 
 @include mediaSm { 

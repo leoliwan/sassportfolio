@@ -11,7 +11,7 @@
         width: 30px;
         height: 4px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($default-color);
         @include easeOut;
     }
     &.close {
@@ -119,6 +119,7 @@
         text-decoration: none;
         padding: 1rem 0;
         font-weight: 500;
+        color: set-text-color($default-color);
         @include easeOut;
 
         &:hover {
