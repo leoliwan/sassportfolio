@@ -55,8 +55,11 @@ main {
 
     &#hero_home {
         overflow: hidden;
+        h1, h2, .social_icons {
+            text-align: center;
+        }
         h1 {
-            margin-top: 20vh;
+            margin-top: 25vh;  
         }
     }
     .social_icons {
@@ -74,6 +77,13 @@ main {
 }
 
 // About Page
+
+#about h1, h2, .social_icons {
+    text-align: center;
+}
+.lg_heading {
+    margin-top: 50px;
+}
 
 .about_me_info {
     margin-top: 3rem;
