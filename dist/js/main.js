@@ -1,6 +1,6 @@
 const hamburgerBtn = document.querySelector('.hamburger_menu');
 const menu = document.querySelector('.menu');
-const navMenu = document.querySelector('.nav_menu');
+const navMenu = document.querySelector('.menu_nav');
 const menuBranding = document.querySelector('.menu_branding');
 const navItems = document.querySelectorAll('.nav_item');
 

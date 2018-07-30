@@ -1,9 +1,9 @@
 // Hamburger Button
 .hamburger_menu {
     position: absolute;
-    right:35px;
+    left:35px;
     top:35px;
-    z-index: pointer;
+    z-index: 3;
     cursor: pointer;
     @include easeOut;
 
@@ -20,7 +20,7 @@
             // Line 1 = Rotate/Translate
             &:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 5px);
-                background: $danger-color
+                background: #fff;
             }
             // Line 2 = Hide
             &:nth-child(2) {
@@ -29,9 +29,107 @@
             // Line 3 = Rotate/Translate
             &:nth-child(3) {
                 transform: rotate(-45deg) translate(8px, -7px);
-                background: $danger-color
+                background: #fff;
             }
         }
     }
-    
+}
+
+// Menu Overlay
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &_branding,
+    &_nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: right;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    // Nav Side
+    &_nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        list-style: none;
+
+        // hide the menu_nave on top and only slide down when the show class is added
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+
+        // Slide down from top
+        &.show {
+        transform: translate3d(0, 0, 0);   
+        }
+    }
+
+    // Branding Side
+    &_branding {
+        background: $default-color;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+         // Slide down from bottom
+         &.show {
+            transform: translate3d(0, 0, 0);   
+        }
+
+        .profile_photo {
+            width: 250px;
+            height: 250px;
+            background: url('../img/profile.jpg');
+            background-size: cover;
+            border-radius: 50%;
+            border: solid 3px $danger-color;
+        }
+    }
+
+    .nav_item {
+        line-height: 50px;
+        transform: translate3d(-400px, 0, 0);
+        @include easeOut;
+
+         // Slide down from right
+         &.show {
+            transform: translate3d(0, 0, 0);   
+        }
+
+        &.current > a {
+            color: $danger-color;
+        }
+    }
+    .nav_link {
+        display: inline-block;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 25px;  
+        text-decoration: none;
+        padding: 1rem 0;
+        font-weight: 500;
+        @include easeOut;
+
+        &:hover {
+            color: $danger-color;
+        }
+    }
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+    .nav_item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+    }
 }
