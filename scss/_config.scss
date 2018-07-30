@@ -7,7 +7,7 @@ $danger-color: rgb(255, 34, 37);
 
 // Images Variables
 $show-home-image: true;
-$hero-image: url(../img/bg-image2.jpg);
+$hero-image: url(../img/bg-image.jpg);
 $backround-opacity: 0.9;
 
 // Transition Mixed In
@@ -18,7 +18,7 @@ $backround-opacity: 0.9;
     @if $show-home-image {
         &#bg-image {
             background: $hero-image;
-            background-size: cover;
+            // background-size: cover;
 
             &:after {
                 content: '';
@@ -31,5 +31,30 @@ $backround-opacity: 0.9;
                 z-index: -1;
             }
         }
+    }
+}
+
+//Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }

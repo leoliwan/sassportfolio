@@ -94,6 +94,34 @@
 .nav_item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg_heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu_nav, div.menu_branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu_nav.show, div.menu_branding.show {
+      transform: translate(0, 0, 0); }
+  .menu_nav {
+    height: 60vh;
+    transform: translate(-100%, 0, 0);
+    font-size: 24px; }
+  .menu_branding {
+    height: 40vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu_branding .profile_photo {
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#hero_home h1 {
+    font-size: 50px; } }
+
 * {
   box-sizing: border-box; }
 
@@ -104,8 +132,7 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif; }
   body#bg-image {
-    background: url(../img/bg-image2.jpg);
-    background-size: cover; }
+    background: url(../img/bg-image.jpg); }
     body#bg-image:after {
       content: '';
       position: absolute;
