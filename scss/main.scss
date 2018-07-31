@@ -139,6 +139,77 @@ main {
     }
 }
 
+// Works/Projects Page
+#hire_me {
+    text-align: center;
+
+    .work_heading {
+        position: relative;
+        background: lighten($default-color, 8);
+        padding: .5rem 0;
+        width: 300px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        margin-left: .5rem;
+        border-bottom: 2px $warning-color solid;
+        border-left: 2px $danger-color solid;
+        transform: skew(-20deg);
+
+        h3 {
+            transform: skew(20deg);
+        }
+    }
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+   
+    .item {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            margin-bottom: 1rem;
+            @include easeOut;
+    
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }   
+}
+
+// Buttons Styles
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.3rem;
+    border: 0;
+    @include easeOut;
+
+    &:hover {
+        background: rgb(206, 22, 25);;
+        color: set-text-color($secondary-color);
+    }
+}
+
+// Extends .btn to both .btn_danger and .btn_dark
+.btn_danger {
+    @extend .btn;
+    background: $warning-color;
+}
+.btn_dark {
+    @extend .btn;
+    background: transparent;
+    border: 1px solid $warning-color;
+}
+
 #main_footer {
     padding: 1rem;
     text-align: center;

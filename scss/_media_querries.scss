@@ -1,9 +1,15 @@
 // Wide Screens 
 @include mediaXl {
+    .works {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 // Dekstop  and Laptops 
 @include mediaLg {
+    .works {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 // Tablets and Small Laptop
@@ -53,7 +59,12 @@
 
         grid-template-columns: 1fr;
     }
+
+    .works {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
 
 
 
@@ -63,5 +74,8 @@
         font-size: 50px;
         // display: none;
         // margin-top: 10vh;
+    }
+    .works {
+        grid-template-columns: 1fr;
     }
 }

@@ -205,6 +205,56 @@ main {
       border-bottom: #FFAB00 solid 3px;
       background: #333; }
 
+#hire_me {
+  text-align: center; }
+  #hire_me .work_heading {
+    position: relative;
+    background: #252525;
+    padding: .5rem 0;
+    width: 300px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+    border-bottom: 2px #FFAB00 solid;
+    border-left: 2px #ff2225 solid;
+    transform: skew(-20deg); }
+    #hire_me .work_heading h3 {
+      transform: skew(20deg); }
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; }
+  .works .item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; }
+    .works .item img {
+      width: 100%;
+      margin-bottom: 1rem;
+      transition: all 0.5s ease-out; }
+      .works .item img:hover {
+        transform: scale(1.1); }
+
+.btn, .btn_danger, .btn_dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+  border: 0;
+  transition: all 0.5s ease-out; }
+  .btn:hover, .btn_danger:hover, .btn_dark:hover {
+    background: #ce1619;
+    color: #fff; }
+
+.btn_danger {
+  background: #FFAB00; }
+
+.btn_dark {
+  background: transparent;
+  border: 1px solid #FFAB00; }
+
 #main_footer {
   padding: 1rem;
   text-align: center;
@@ -213,6 +263,14 @@ main {
   height: 90px; }
   #main_footer p {
     font-weight: 300; }
+
+@media screen and (min-width: 1171px) {
+  .works {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .works {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -239,8 +297,12 @@ main {
       height: 150px; }
   .about_me_info {
     grid-template-areas: 'profile_image' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .works {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#hero_home h1 {
-    font-size: 50px; } }
+    font-size: 50px; }
+  .works {
+    grid-template-columns: 1fr; } }
