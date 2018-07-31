@@ -199,6 +199,39 @@ main {
     }
 }
 
+// Contact Page
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-top: 1rem;
+
+    span {
+        color: $warning-color;
+        font-weight: 500;
+    }
+
+    div {
+        border: 1px solid $danger-color;
+        padding: 1rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            background: $warning-color;
+            
+            span {
+                color: #fff;
+            }
+            a {
+                color: $default-color;
+            }
+            color: $default-color;
+        }
+    }
+}
+
 // Extends .btn to both .btn_danger and .btn_dark
 .btn_danger {
     @extend .btn;
@@ -209,6 +242,21 @@ main {
     background: transparent;
     border: 1px solid $warning-color;
 }
+
+.contact_me {
+    margin-top: 3rem;
+   
+    .btn_contact {
+       @extend .btn;
+       margin-top: 1rem !important;
+       border-radius: 30px;
+       width: 300px;
+       margin: 0 auto;
+       background: $danger-color;
+    }
+}
+
+
 
 #main_footer {
     padding: 1rem;

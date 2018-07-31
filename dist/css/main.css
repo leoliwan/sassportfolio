@@ -238,15 +238,37 @@ main {
       .works .item img:hover {
         transform: scale(1.1); }
 
-.btn, .btn_danger, .btn_dark {
+.btn, .btn_danger, .btn_dark, .contact_me .btn_contact {
   display: block;
   padding: 0.5rem 1rem;
   margin-bottom: 0.3rem;
   border: 0;
   transition: all 0.5s ease-out; }
-  .btn:hover, .btn_danger:hover, .btn_dark:hover {
+  .btn:hover, .btn_danger:hover, .btn_dark:hover, .contact_me .btn_contact:hover {
     background: #ce1619;
     color: #fff; }
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-self: center;
+  margin-top: 1rem; }
+  .contacts span {
+    color: #FFAB00;
+    font-weight: 500; }
+  .contacts div {
+    border: 1px solid #ff2225;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .contacts div:hover {
+      background: #FFAB00;
+      color: #111; }
+      .contacts div:hover span {
+        color: #fff; }
+      .contacts div:hover a {
+        color: #111; }
 
 .btn_danger {
   background: #FFAB00; }
@@ -254,6 +276,15 @@ main {
 .btn_dark {
   background: transparent;
   border: 1px solid #FFAB00; }
+
+.contact_me {
+  margin-top: 3rem; }
+  .contact_me .btn_contact {
+    margin-top: 1rem !important;
+    border-radius: 30px;
+    width: 300px;
+    margin: 0 auto;
+    background: #ff2225; }
 
 #main_footer {
   padding: 1rem;
